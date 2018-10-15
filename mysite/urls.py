@@ -19,7 +19,7 @@ from myblog.urls import url
 from django.contrib.auth import login, logout
 
 urlpatterns = [
-    path(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
     url(r'^', include('myblog.urls')),
     url(r'^login/$', login, {'template_name': 'login.html'}, name='login'),
     url(r'^logout/$', logout, {'next_page': '/'}, name='logout'),
